@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Cursos CAD y CAM">
+        <meta name="keywords" content="cursos, caba, capital   federal, cad, cam">
+        <title>ArCADxArCAM</title>
+        <link rel="stylesheet" href="css/stylesheet.css">
+        <link rel="stylesheet" href="css/main.css">
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+        <script defer src="js/javascript.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Quantico&display=swap" rel="stylesheet">
+        <style type="text/css">
+            body {
+                background-image: url("./img/background.png");
+                background-size: cover;
+                background-attachment: fixed;
+    
+                
+    
+    
+    
+            }
+        </style>
+</head>
+<body>
+    <header class="headershadow  sticky-top" class="header ">    
+        <nav  class="header__nav header_navbackground" >
+            <div class=" header__nav__div ">
+                <a class=" header__nav__div__a" href="#index.html">
+                    <img class="header__nav__div__a__img" src="./img/logo.png" alt="foto logo">
+                </a> 
+            </div>
+            <button class="header__nav__button" data-toggle="collapse" data-target="#navBar">
+                <span class="header__nav__button__span"></span>
+            </button>
+            <div class="header__nav__text" id="navBar">
+                <ul class="header__nav__text__ul">
+                    <li class="header__nav__text__ul__li">
+                        <a href="#idcursocad" class="header__nav__text__ul__li__a">Cursos CAD</a>
+                    </li>
+                    
+                    
+                       
+                        <li class=" header__nav__text__ul__li">
+                            <a href="#idcursocam" class="  header__nav__text__ul__li__a navbar-link text-decoration-none">Cursos CAM</a>
+                        </li>
+                        <li class="header__nav__text__ul__li">
+                            <a href="#cont" class="header__nav__text__ul__li__a navbar-link text-decoration-none">Contacto</a>
+                        </li>
+
+
+                        <li class="header__nav__text__ul__li">
+                            <i id="carritoMercado" class="fas fa-shopping-cart fa-3x header__nav__redes__img"></i>
+
+
+
+
+
+
+                        </li>
+
+
+                <li class="header__nav__text__ul__li">
+                    <!-- ICONO USUARIO -->
+                 <i class=" fas fa-user fa-3x"onclick="buscarCuenta()" data-toggle="modal" data-target="#staticBackdrop" href="#"></i>
+                             <div class=" header__nav__redes">
+                 
+                    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title" id="staticBackdropLabel">Realizar REGISTRO</h3>
+                                   
+                                    
+                                </div>
+                                <div class="modal-body">
+                                <large for="exampleInputName1">Completado el registro, se te enviará al mail que proporcionaste, un número de miembro que sera tu clave para ingresar a la plataforma.</large>
+                                </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="exampleInputName1">Nombre</label>
+                                        <input type="password" class="form-control" id="exampleInputPassword1">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Email </label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        <large id="emailHelp" class="form-text text-muted">Nunca compartas tus datos con NADIE</large>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Contraseña</label>
+                                        <input type="password" class="form-control" id="exampleInputPassword1">
+                                    </div>
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary" onclick="login()">LOG IN</button>
+                                    <large id="emailHelp" class="form-text text-muted">En caso de que seas usuario haga CLICK en LOG IN</large>
+                                </form>
+                            </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">CERRAR</button>
+                                    <button type="button" class="btn btn-primary">ACEPTAR</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                
+                 </div>
+                </li>
+
+
+
+                </ul>
+
+
+
+                
+            </div>
+               
+
+
+
+
+
+
+
+      <div class="sectionM__sidebar " >
+        <h2 class="sectionM__sidebar__h2">CARRITO DE COMPRAS</h2>
+        <h4 class="sectionM__sidebar__h4">SELEECION DE CURSOS</h4>
+        <div class="sectionM__sidebar__boton">
+         <p  class="sectionM__sidebar__boton__p">Total: $<span id="total">0</span></p>
+         <button id="comprarSide" type="button" class="btn btn-dark">Comprar</button>
+         <button id="vaciarSide" type="button" class="btn btn-dark">Vaciar</button>
+         <button id="cerrarSide" type="button" class="btn btn-dark">Cerrar</button>
+        </div>
+        <div id="aqui" class="sectionM__sidebar__div row ">
+      <!-- AGREGAR JS -->
+        </div>
+       </div>
+
+
+
+
+
+
+        </nav>
+        
+
+    </header>
+    <section class="sectionM container-fluid">
+
+
+
+
+    <div class="padrenuevocurso">
+      <div class="imagennuevocurso">
+        <img class="solid"src="./img/solid2.png" alt="solid">
+    
+      </div>
+        <div class="textonuevocurso">
+          <div class="nuevocurso">Consulte por las fechas 2021 de nuestro curso Solidworks.</div>
+         <button onclick="cupos()" class="btn btn-light-blue"><div class="verfechas">Ver fechas</div></button>
+          
+        </div>
+        
+        
+    
+    </div>
+    
+    <p id="idcursocad"></p>
+    <div class="containerh2"> 
+        <div class="title3">
+     
+  
+     <h1>CURSOS CAD</h1> </div>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12" >
+        <div class="row ">
+            <div class="padrecard">
+              
+               <div id="cursos" class="card-deck">
+                <!-- AQUI SE IMPRIMEN LOS CURSOS DESDE JS -->
+               </div>
+              
+
+            </div>
+        </div>  
+    </div>
+    <br>
+    <br>
+
+    
+    <p id="idcursocam"></p>
+    <div class="containerh2"> 
+        <div class="title3">
+     
+  
+     <h1>CURSOS CAM</h1> </div>
+    </div>
+       <div class="col-md-12 col-sm-12 col-xs-12" >
+           <div class="row ">
+               <div class="padrecard">
+                 
+                  <div id="cursos2" class="card-deck">
+                   <!-- AQUI SE IMPRIMEN LOS CURSOS DESDE JS -->
+                  </div>
+                 
+   
+               </div>
+           </div>  
+       </div>
+
+    </div>
+    <p id="cont"></p>
+    <div class="text-center mt-4">
+        <div class="contfont">CONTACTO</div>
+    </div>
+    <div class="padreiconocontacto">
+      <div class="iconocontacto">
+        <img src="./img/ubicacion.png" class="img-fluid imgcontacto" alt="Responsive image">
+        <p>Buenos Aires, Argentina.</p>
+  
+      </div>
+  
+      <div class="iconocontacto">
+        <img src="./img/telefono.png" class="img-fluid imgcontacto" alt="Responsive image">
+        <p>1151505891</p>
+  
+      </div>
+  
+      <div class="iconocontacto">
+        <img src="./img/mail.png" class="img-fluid imgcontacto" alt="Responsive image">
+        <p>info@arcadxarcam.com.ar</p>
+  
+      </div>
+    </div>
+  
+  
+  
+    
+  
+  
+  
+  
+  
+  
+    <div class="padrecardcontacto">
+    <section class="col-lg-8 mb-4">
+  
+      <!--Section heading-->
+      <h3 class="h1-responsive font-weight-bold text-center my-4">ESCRIBENOS</h3>
+      <!--Section description-->
+      <div class="teresponderemos">
+        <p>Te responderemos a la brevedad.</p></div>
+        <br>
+  
+      
+  
+          <!--Grid column-->
+          <div class="col-md-12">
+              <form id="contact-form" name="contact-form" action="enviar2.php" method="POST">
+  
+                  <!--Grid row-->
+                  
+                    <div class="row">
+                      <!--Grid column-->
+                      <div class="col-md-6">
+                          <div class="md-form mb-0">
+                              <input type="text" id="nombre" name="nombre" required="required" class="form-control">
+                              <label for="name" class=""><p>Nombre</p></label>
+                          </div>
+                      </div>
+                      <!--Grid column-->
+  
+                      <!--Grid column-->
+                      <div class="col-md-6">
+                          <div class="md-form mb-0">
+                              <input type="text" id="email" name="email" required="required" class="form-control">
+                              <label for="email" class=""><p>Email</p></label>
+                          </div>
+                      </div>
+                      <!--Grid column-->
+                    </div>
+                  
+                  <!--Grid row-->
+  
+                  
+  
+                  <!--Grid row-->
+                  
+                    <div class="row">
+                      <!--Grid column-->
+                      <div class="col-md-12">
+  
+                          <div class="md-form">
+                              <textarea type="text" id="mensaje" name="mensaje"  required="required" rows="2" class="form-control md-textarea"></textarea>
+                              <label for="message"><p>Mensaje</p></label>
+                          </div>
+  
+                      </div>
+                    </div>
+                  <!--Grid row-->
+  
+              </form>
+  
+              <div class="text-center mt-4">
+                <button type="submit" class="btn btn-light-blue"><div class="verfechas">Enviar</div></button>
+              </div>
+              <div class="status"></div>
+          </div>
+
+          
+      
+
+
+  
+
+
+</section>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="crossorigin="anonymous"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/199cb6dc3b.js" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+
+   
+  
